@@ -38,11 +38,40 @@ Exemple:
      55
 
 '''
+import pytest
 
-def fibonacci(fibonacci_number):
-    # Write here your code
+def fibonacci(fibonacci_number):  
+    if not isinstance(fibonacci_number, int):
+        raise ValueError("El número debe ser un entero")
+    
+    if fibonacci_number < 0:
+        raise ValueError ("El número no puede ser negativo.")
+    
+    if fibonacci_number < 2:
+        return fibonacci_number
+    
+    return fibonacci(fibonacci_number - 1) + fibonacci(fibonacci_number - 2)
     pass
+    # Write here your code
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(fibonacci(10))
+
+print(fibonacci(10))
+
+
+#if __name__ == "__main__":
+ #   while True:
+  #      try:
+   #         numero_usuario = int(input("Introduce un número: "))
+                
+    #        if numero_usuario < 0:
+     #           print("Error: El número a ingresar debe ser mayor a cero!")
+      #          continue
+       #     break
+
+        #except ValueError:
+         #       print("Error: Debes ingresar número enteros y no letras!")    
+
+    #resultado = fibonacci(numero_usuario)
+    #print (f"El fibonacci de {numero_usuario} es: {resultado}")
