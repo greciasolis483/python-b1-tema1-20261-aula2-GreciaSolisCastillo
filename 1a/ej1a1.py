@@ -9,7 +9,7 @@ corresponder con el tipo de error durante la validación.
 
 Parámetros:
 - fibonacci_number: Número entero positivo mayor a 0 que representa la
-posición en la serie Fibonacci. Oye haz tu tarea
+posición en la serie Fibonacci. 123
 
 Ejemplo:
     Entrada:
